@@ -1,0 +1,29 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Network Printer Test</h1>
+    <h2>In order to reach host ip use magic hostname: host.docker.internal</h2>
+    <form method="post" action="@Url.Action("PrintTest", "Home")">
+        <fieldset>
+            <legend>Add Customer</legend>
+            <div>
+                <label for="CompanyName">Content:</label>
+                <textarea rows="4" cols="50" name="content" value=""></textarea>
+            </div>
+            <div>
+                <label for="ContactName">IP:</label>
+                <input type="text" name="ip" value="" />
+            </div>
+            <div>
+                <label for="Employees">PORT:</label>
+                <input type="text" name="port" value="" />
+            </div>
+            <div>
+                <label>&nbsp;</label>
+                <input type="submit" value="Submit" class="submit" />
+            </div>
+        </fieldset>
+    </form>
+</div>
